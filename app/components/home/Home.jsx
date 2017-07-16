@@ -1,47 +1,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Header from './layout/Header';
+import Sidebar from './layout/Sidebar';
 import menu from '../../menu';
 
 require('./Home.css');
 
-const Home = (props) => {
-  const { title, description, docsLink, github } = menu;
-  const githubUrl = `https://ghbtns.com/github-btn.html?user=${github.user}&repo=${github.repository}`;
+const routes = [];
+for (let i = 0, len = menu.sections.length; i < len; i += 1) {
+  for (let j = 0, jlen = menu.sections[i].links.length; j < jlen; j += 1) {
+    const link = menu.sections[i].links[j];
+    routes[link.href] = link;
+  }
+}
+
+const Docs = (props) => {
+  const link = routes[props.link];
+
   return (
-    <div className="home">
-      <h1 className="title">{title}</h1>
-      <p className="description">{description}</p>
-      <div className="buttons">
-        <iframe
-          src={`${githubUrl}&type=star&count=true&size=large`}
-          frameBorder="0"
-          scrolling="0"
-          width="160px"
-          height="30px"
-        />
-        <iframe
-          src={`${githubUrl}&type=fork&count=true&size=large`}
-          frameBorder="0"
-          scrolling="0"
-          width="158px"
-          height="30px"
-        />
-      </div>
-      <p className="documentation">
-        <a
-          className="docs-button"
-          onClick={() => props.handleLink(docsLink)}
-        >
-          <i className="fa fa-book" />
-          Documentation
-        </a>
-      </p>
+    <div className="docs">
+      <Sidebar handleLink={props.handleLink} />
+      <main>
+        {
+          link ? (
+            <div>
+              <Header
+                title={link.title}
+                description={link.description}
+              />
+              { link.component }
+            </div>
+          ) : (
+            <Header
+              title="404 - Not Found"
+              description="Page not found"
+            />
+          )
+        }
+      </main>
     </div>
   );
 };
 
-Home.propTypes = {
+Docs.propTypes = {
+  link: PropTypes.string.isRequired,
   handleLink: PropTypes.func.isRequired,
 };
 
-export default Home;
+export default Docs;

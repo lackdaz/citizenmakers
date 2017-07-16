@@ -1,7 +1,5 @@
 import React from 'react';
 
-require('./Component1.css');
-
 const properties = [
   {
     name: 'title',

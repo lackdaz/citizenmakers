@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Home from './components/home/Home';
-import Docs from './components/docs/Docs';
+import Landing from './components/landing/Landing';
 
 const $ = require('jquery');
 
