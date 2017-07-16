@@ -28,7 +28,7 @@ const menu = {
   sections: [
     {
       title: 'Intro',
-      icon: 'fa fa-arrow-right',
+      icon: 'fa fa-asterisk',
       links: [
         {
           href: '/about',
@@ -46,7 +46,7 @@ const menu = {
     },
     {
       title: 'Participate',
-      icon: 'fa fa-arrow-right',
+      icon: 'fa fa-bomb',
       links: [
         {
           href: '/pop',
@@ -69,8 +69,26 @@ const menu = {
       ],
     },
     {
+      title: 'Learn About',
+      icon: 'fa fa-book',
+      links: [
+        {
+          href: '/hho',
+          title: 'HHO',
+          description: 'A clean and very explosive reactant',
+          component: <HHO />,
+        },
+        {
+          href: '/electrolysis',
+          title: 'Electrolysis',
+          description: 'Using electricity to...',
+          component: <Electrolysis />,
+        },
+      ]
+    },
+    {
       title: 'Find Us',
-      icon: 'fa fa-code',
+      icon: 'fa fa-location-arrow',
       links: [
         {
           href: '/location',

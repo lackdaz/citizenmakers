@@ -38,15 +38,15 @@ class App extends Component {
 
   render() {
     const { link } = this.state;
-    const isHome = link.indexOf('/docs') < 0;
+    const isLanding = link.length <= 1
 
-    return isHome ? (
-      <Home
+    return isLanding ? (
+      <Landing
         link={link}
         handleLink={this.handleLink}
       />
     ) : (
-      <Docs
+      <Home
         link={link}
         handleLink={this.handleLink}
       />
