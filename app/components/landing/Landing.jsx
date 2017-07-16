@@ -17,8 +17,8 @@ const Home = (props) => {
           className="docs-button"
           onClick={() => props.handleLink(docsLink)}
         >
-          <i className="fa fa-book" />
-          Learn More
+          <i className="fa fa-bomb" />
+          BOOM!
         </a>
       </p>
     </div>

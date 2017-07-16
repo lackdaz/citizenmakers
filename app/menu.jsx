@@ -33,13 +33,12 @@ const menu = {
         {
           href: '/about',
           title: 'About',
-          description: 'We are makers',
+          description: 'Psst!',
           component: <About />,
         },
         {
           href: '/team',
           title: 'The Team',
-          description: 'The Team',
           component: <Team />,
         },
       ],
@@ -56,14 +55,14 @@ const menu = {
         },
         {
           href: '/sear',
-          title: 'The Team',
-          description: 'The Team',
+          title: 'Sear',
+          description: 'Try out a DIY HHO torch!',
           component: <Sear />,
         },
         {
           href: '/launch',
-          title: 'Dangerous Demos',
-          description: '3,2,1... ',
+          title: 'Rocket Launch',
+          description: 'Dangerous Demos',
           component: <Launch />,
         },
       ],

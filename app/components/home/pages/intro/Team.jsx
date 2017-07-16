@@ -9,12 +9,26 @@ npm start
 
 const Installation = () => (
   <div className="docs-installation">
-    <p>Run the following commands in your terminal</p>
-    <pre>
-      <code className="bash">
-        { installationCode }
-      </code>
-    </pre>
+    <p>
+      <strong>
+        Team members:
+      </strong>
+      <ul>
+        <li>
+          Cathy Ooi
+        </li>
+        <li>
+          Gabriel Koh
+        </li>
+        <li>
+          Dona Banerjee
+        </li>
+        <li>
+          Seth Loh
+        </li>
+      </ul>
+    </p>
+
   </div>
 );
 
