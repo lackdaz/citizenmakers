@@ -50,7 +50,7 @@ const menu = {
         {
           href: '/pop',
           title: 'Pop',
-          description: 'You can...',
+          description: 'Bubbles that really pop',
           component: <Pop />,
         },
         {
