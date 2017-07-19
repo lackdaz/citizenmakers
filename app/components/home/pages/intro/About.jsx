@@ -1,11 +1,6 @@
 import React from 'react';
 
-const installationCode =
-`git clone https://github.com/LucasBassetti/react-spa-boilerplate.git
-cd react-spa-boilerplate
-npm install
-npm start
-`;
+require('./intro.css');
 
 const Installation = () => (
   <div className="docs-installation">

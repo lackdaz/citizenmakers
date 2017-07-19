@@ -17,7 +17,7 @@
   left: 0;
   top: 0;
   z-index: 99999;
-  background-color: #f6f8fa;
+  background-color: #8ed4dc;
   border-right: 1px solid #e2e4e6;
   overflow-y: scroll;
 }
@@ -93,7 +93,7 @@
 }
 
 .sidebar-links div .sub-links a.selected-link {
-  color: #944eb8;
+  color: #999AC6;
 }
 
 /* Link Colors */
